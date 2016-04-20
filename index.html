@@ -33,14 +33,20 @@
     <script>
         var sigObj =
         {
-            ExternalDocumentRef: "0123456789",
-            DocumentTitle: "JsSign testdokument",
-            DocumentDescription: "Test document to sign... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id tristique diam. Nunc vel dui porttitor, gravida ligula eu, sagittis turpis. Phasellus eu aliquam mi. In convallis tellus at nulla sollicitudin euismod. Duis quis nunc dictum erat ornare aliquam. Aenean mattis tincidunt dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce viverra hendrerit dolor et faucibus. Mauris iaculis quam justo.",
-            DocumentUrl: "URL TIL DOKUMENT",
-            DocumentItemDescription: "Dokumenttittel",
-            ErrorUrl: "https://localhost/jssign/?error",
-            CancelUrl: "https://localhost/jssign/?cancel",
-            SuccessUrl: "https://localhost/jssign/?success",
+            ExternalDocumentRef: "0123456789", //ekstern referanse
+            DocumentTitle: "JsSign testdokument", //tittel for signering
+            DocumentDescription: "Test document to sign... Lorem ipsum dolor sit amet, " +
+                "consectetur adipiscing elit. Sed id tristique diam. Nunc vel dui porttitor, " +
+                "gravida ligula eu, sagittis turpis. Phasellus eu aliquam mi. In convallis " +
+                "tellus at nulla sollicitudin euismod. Duis quis nunc dictum erat ornare aliquam. " +
+                "Aenean mattis tincidunt dictum. Class aptent taciti sociosqu ad litora torquent " +
+                "per conubia nostra, per inceptos himenaeos. Fusce viverra hendrerit dolor et " +
+                "faucibus. Mauris iaculis quam justo.", //beskrivelse av dokument
+            DocumentUrl: "URL TIL DOKUMENT", //url hvor dokument kan lastes ned
+            DocumentItemDescription: "Dokumenttittel", //tittel på dokument
+            ErrorUrl: "https://localhost/jssign/?error", //url man blir redirect-et til ved feil 
+            CancelUrl: "https://localhost/jssign/?cancel", //url man blir redirect-et til hvis bruker avbryter
+            SuccessUrl: "https://localhost/jssign/?success", //url man blir redirect-et til ved suksess
             SigneeRefs: [],
         };
     </script>

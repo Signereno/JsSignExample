@@ -44,9 +44,9 @@
                 "faucibus. Mauris iaculis quam justo.", //beskrivelse av dokument
             DocumentUrl: "URL TIL DOKUMENT", //url hvor dokument kan lastes ned
             DocumentItemDescription: "Dokumenttittel", //tittel på dokument
-            ErrorUrl: "https://localhost/jssign/?error", //url man blir redirect-et til ved feil 
-            CancelUrl: "https://localhost/jssign/?cancel", //url man blir redirect-et til hvis bruker avbryter
-            SuccessUrl: "https://localhost/jssign/?success", //url man blir redirect-et til ved suksess
+            ErrorUrl: "https://"+window.location.hostname+window.location.pathname+"?error", //url man blir redirect-et til ved feil 
+            CancelUrl: "https://"+window.location.hostname+window.location.pathname+"?cancel", //url man blir redirect-et til hvis bruker avbryter
+            SuccessUrl: "https://"+window.location.hostname+window.location.pathname+"?success", //url man blir redirect-et til ved suksess
             SigneeRefs: [],
         };
     </script>

@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://az833285.vo.msecnd.net/favicon.ico" rel="shortcut icon" type="image/x-icon" /> 
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>JS Signere Sign Client Test</title>
     <!-- Bootstrap -->
@@ -19,11 +20,14 @@
     <![endif]-->
 </head>
 <body>
-    <h1>Hello, JS Signere Sign Client!</h1>
-
-    <button class="btn btn-default" id="button" onclick="createSignature()">Klikk meg!</button>
-	
+<div class="container">
+    <h1>Signere.no EasySign demo!</h1>
+	<br/>
+<p>
+    <button class="btn btn-default" id="button" onclick="createSignature()" style="text-align:center;"><img src="https://az833285.vo.msecnd.net/favicon.ico"/>&nbsp;Start signering!</button>
+	</p>
 	<pre id="result" style="display:none"></pre>
+	</div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -31,7 +35,7 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <!-- signere sign client-->
-    <script src="https://signerejs.azureedge.net/0525834d21324ca4bba7a60701523728.js"></script>-->
+    <script src="https://signerejs.azureedge.net/0525834d21324ca4bba7a60701523728.js"></script>
 	
     <script>
         var sigObj =
@@ -45,11 +49,11 @@
                 "Aenean mattis tincidunt dictum. Class aptent taciti sociosqu ad litora torquent " +
                 "per conubia nostra, per inceptos himenaeos. Fusce viverra hendrerit dolor et " +
                 "faucibus. Mauris iaculis quam justo.", //beskrivelse av dokument
-            DocumentUrl: "https://"+window.location.hostname+window.location.pathname+"UnitTestDoc.pdf", //url hvor dokument kan lastes ned 
+            DocumentUrl: "https://"+window.location.hostname+window.location.pathname+"UnitTestDoc.pdf", //url hvor dokument kan lastes ned
             DocumentItemDescription: "Dokumenttittel", //tittel på dokument
-            ErrorUrl: "https://"+window.location.hostname+window.location.pathname+"/#error?errorcode=[2]", //url man blir redirect-et til ved feil 
-            CancelUrl: "https://"+window.location.hostname+window.location.pathname+"/#cancel", //url man blir redirect-et til hvis bruker avbryter
-            SuccessUrl: "https://"+window.location.hostname+window.location.pathname+"/#success?jssignjwt=[jssignjwt]", //url man blir redirect-et til ved suksess
+            ErrorUrl: "https://"+window.location.hostname+window.location.pathname+"index.html#error?errorcode=[2]", //url man blir redirect-et til ved feil 
+            CancelUrl: "https://"+window.location.hostname+window.location.pathname+"index.html#cancel", //url man blir redirect-et til hvis bruker avbryter
+            SuccessUrl: "https://"+window.location.hostname+window.location.pathname+"index.html#success?jssignjwt=[jssignjwt]", //url man blir redirect-et til ved suksess
             SigneeRefs: [],
         };
 		

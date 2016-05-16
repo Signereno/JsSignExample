@@ -38,6 +38,7 @@
     <script src="https://signerejs.azureedge.net/0525834d21324ca4bba7a60701523728.js"></script>
 	
     <script>
+    	var rootPath="https://"+window.location.hostname+window.location.pathname.replace("index.html","");
         var sigObj =
         {
             ExternalDocumentRef: "0123456789", //ekstern referanse
@@ -49,11 +50,11 @@
                 "Aenean mattis tincidunt dictum. Class aptent taciti sociosqu ad litora torquent " +
                 "per conubia nostra, per inceptos himenaeos. Fusce viverra hendrerit dolor et " +
                 "faucibus. Mauris iaculis quam justo.", //beskrivelse av dokument
-            DocumentUrl: "https://"+window.location.hostname+window.location.pathname+"UnitTestDoc.pdf", //url hvor dokument kan lastes ned
+            DocumentUrl: rootPath+"UnitTestDoc.pdf", //url hvor dokument kan lastes ned
             DocumentItemDescription: "Dokumenttittel", //tittel på dokument
-            ErrorUrl: "https://"+window.location.hostname+window.location.pathname+"index.html#error?errorcode=[2]", //url man blir redirect-et til ved feil 
-            CancelUrl: "https://"+window.location.hostname+window.location.pathname+"index.html#cancel", //url man blir redirect-et til hvis bruker avbryter
-            SuccessUrl: "https://"+window.location.hostname+window.location.pathname+"index.html#success?jssignjwt=[jssignjwt]", //url man blir redirect-et til ved suksess
+            ErrorUrl: rootPath+"index.html#error?errorcode=[2]", //url man blir redirect-et til ved feil 
+            CancelUrl: rootPath+"index.html#cancel", //url man blir redirect-et til hvis bruker avbryter
+            SuccessUrl: rootPath+"index.html#success?jssignjwt=[jssignjwt]", //url man blir redirect-et til ved suksess
             SigneeRefs: [],
         };
 		

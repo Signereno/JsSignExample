@@ -52,7 +52,7 @@
                 "faucibus. Mauris iaculis quam justo.", //beskrivelse av dokument
             DocumentUrl: rootPath+"UnitTestDoc.pdf", //url hvor dokument kan lastes ned
             DocumentItemDescription: "Dokumenttittel", //tittel på dokument
-            Domain: "Enter the domain where your application runs" //domenet som applikasjonen kjører på
+            Domain: window.location.hostname, //domenet som applikasjonen kjører på
             ErrorUrl: rootPath+"index.html#error?errorcode=[2]", //url man blir redirect-et til ved feil 
             CancelUrl: rootPath+"index.html#cancel", //url man blir redirect-et til hvis bruker avbryter
             SuccessUrl: rootPath+"index.html#success?jssignjwt=[jssignjwt]", //url man blir redirect-et til ved suksess
